@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC7FDB831AB0B03700D248DF /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FDB821AB0B03700D248DF /* RecordedAudio.swift */; };
+		ECABE2DD1BFDDF1100871EF5 /* MONavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECABE2DC1BFDDF1100871EF5 /* MONavigation.swift */; };
 		ECDA87291AB0990B009CF593 /* SoundsPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA87281AB0990B009CF593 /* SoundsPlayerViewController.swift */; };
 		ECDA872B1AB0995B009CF593 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ECDA872A1AB0995B009CF593 /* movie_quote.mp3 */; };
 		ECF602171AAF559F00C4D761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF602161AAF559F00C4D761 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		EC7FDB821AB0B03700D248DF /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
+		ECABE2DC1BFDDF1100871EF5 /* MONavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MONavigation.swift; sourceTree = "<group>"; };
 		ECDA87281AB0990B009CF593 /* SoundsPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsPlayerViewController.swift; sourceTree = "<group>"; };
 		ECDA872A1AB0995B009CF593 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
 		ECF602111AAF559F00C4D761 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +89,7 @@
 				ECF602161AAF559F00C4D761 /* AppDelegate.swift */,
 				ECF602181AAF559F00C4D761 /* RecordSoundsViewController.swift */,
 				ECDA87281AB0990B009CF593 /* SoundsPlayerViewController.swift */,
+				ECABE2DC1BFDDF1100871EF5 /* MONavigation.swift */,
 				EC7FDB821AB0B03700D248DF /* RecordedAudio.swift */,
 				ECF602361AAF5CF700C4D761 /* MyPlayground.playground */,
 				ECF6021A1AAF559F00C4D761 /* Main.storyboard */,
@@ -167,6 +170,8 @@
 		ECF602091AAF559F00C4D761 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Moba;
 				TargetAttributes = {
@@ -227,6 +232,7 @@
 				EC7FDB831AB0B03700D248DF /* RecordedAudio.swift in Sources */,
 				ECF602191AAF559F00C4D761 /* RecordSoundsViewController.swift in Sources */,
 				ECF602171AAF559F00C4D761 /* AppDelegate.swift in Sources */,
+				ECABE2DD1BFDDF1100871EF5 /* MONavigation.swift in Sources */,
 				ECDA87291AB0990B009CF593 /* SoundsPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

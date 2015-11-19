@@ -12,7 +12,7 @@ import AVFoundation
 class SoundsPlayerViewController: UIViewController {
     var audioPlayer = AVAudioPlayer()
     var recievedAudio : RecordedAudio!
-    var audioEngine = AVAudioEngine()!
+    var audioEngine = AVAudioEngine()
     var audioFile:AVAudioFile!
 
     @IBOutlet weak var slowButton: UIButton!
@@ -20,17 +20,19 @@ class SoundsPlayerViewController: UIViewController {
     override func viewDidLoad() {
 
 
-        audioFile = AVAudioFile(forReading: recievedAudio.filePathUrl, error: nil)
+        audioFile = try? AVAudioFile(forReading: recievedAudio.filePathUrl)
 
-        var error:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL:  recievedAudio.filePathUrl, error: &error)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL:  recievedAudio.filePathUrl)
+        } catch _ as NSError {
+            
+        }
         audioPlayer.enableRate = true
         audioPlayer.volume  = 1.0
-        var overrideError : NSError?
-        if AVAudioSession.sharedInstance().overrideOutputAudioPort(.Speaker, error: &error){
-
-        }else{
-            print("error in overrideOutputAudioPort " + overrideError!.localizedDescription)
+        do {
+            try AVAudioSession.sharedInstance().overrideOutputAudioPort(.Speaker)
+        } catch let err  as NSError {
+            print("error in overrideOutputAudioPort " + err.localizedDescription, terminator: "")
         }
 
     }
@@ -45,7 +47,7 @@ class SoundsPlayerViewController: UIViewController {
         audioPlayer.stop()
     }
     @IBAction func playChipmunkSound(sender: AnyObject) {
-        var changePitchEffect = AVAudioUnitTimePitch()
+        let changePitchEffect = AVAudioUnitTimePitch()
         changePitchEffect.pitch =  1000
         playAudioWithVEffect(changePitchEffect)    }
     @IBAction func playSlowSound(sender: AnyObject) {
@@ -57,7 +59,7 @@ class SoundsPlayerViewController: UIViewController {
 
     }
     @IBAction func playDarthVaderAudio(sender: AnyObject) {
-         var changePitchEffect = AVAudioUnitTimePitch()
+         let changePitchEffect = AVAudioUnitTimePitch()
         changePitchEffect.pitch = -1000
         playAudioWithVEffect(changePitchEffect)
 
@@ -76,7 +78,7 @@ class SoundsPlayerViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
 
-        var audioPlayerNode = AVAudioPlayerNode()
+        let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         audioEngine.attachNode(Effect )
 
@@ -84,13 +86,16 @@ class SoundsPlayerViewController: UIViewController {
         audioEngine.connect(Effect, to: audioEngine.outputNode, format: nil)
 
         audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-        audioEngine.startAndReturnError(nil)
+        do {
+            try audioEngine.start()
+        } catch _ {
+        }
         
         audioPlayerNode.play()
     }
     @IBAction func playDistortionEffect(sender: AnyObject) {
 
-        var distortionEffect = AVAudioUnitDistortion()
+        let distortionEffect = AVAudioUnitDistortion()
 
         distortionEffect.loadFactoryPreset(AVAudioUnitDistortionPreset.MultiEcho2)
 

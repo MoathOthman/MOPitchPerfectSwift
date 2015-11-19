@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bMm-eK-Gp3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bMm-eK-Gp3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +42,7 @@
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PSk-Z8-nGH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTw-XK-0KC">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTw-XK-0KC">
                                 <rect key="frame" x="139" y="509" width="43" height="30"/>
                                 <state key="normal" title="Pause">
                                     <color key="titleColor" red="0.96078431369999995" green="0.76470588240000004" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
@@ -117,7 +118,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbM-5u-CC8">
-                                <rect key="frame" x="35" y="333" width="100" height="100"/>
+                                <rect key="frame" x="35" y="367" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4Vk-cv-uzT"/>
+                                    <constraint firstAttribute="height" constant="100" id="vfQ-rS-Ohi"/>
+                                </constraints>
                                 <state key="normal" image="chipmunk">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -126,7 +131,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6r-5l-LZK">
-                                <rect key="frame" x="185" y="333" width="100" height="100"/>
+                                <rect key="frame" x="185" y="367" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Vlh-nZ-NJg"/>
+                                    <constraint firstAttribute="width" constant="100" id="aRV-SY-K4D"/>
+                                </constraints>
                                 <state key="normal" image="darthvader@2x~iphone (1)">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -135,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIt-pP-Rcw">
-                                <rect key="frame" x="127" y="269" width="67" height="30"/>
+                                <rect key="frame" x="118" y="269" width="68" height="30"/>
                                 <state key="normal" title="Distortion">
                                     <color key="titleColor" red="0.96078431369999995" green="0.76470588240000004" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,16 +157,16 @@
                         <color key="backgroundColor" red="0.31980401027345423" green="0.54504493278846522" blue="0.85864504419191923" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Hg7-vN-H6I" secondAttribute="trailing" constant="19" id="1zj-rD-PPP"/>
+                            <constraint firstItem="w9k-fh-25q" firstAttribute="top" secondItem="d6r-5l-LZK" secondAttribute="bottom" constant="101" id="4sx-kn-g57"/>
+                            <constraint firstItem="w9k-fh-25q" firstAttribute="top" secondItem="qbM-5u-CC8" secondAttribute="bottom" constant="101" id="6yG-Kr-1Hd"/>
                             <constraint firstItem="PDV-IU-clL" firstAttribute="top" secondItem="SyO-fn-z1x" secondAttribute="bottom" constant="37" id="GTP-gV-Lso"/>
                             <constraint firstItem="PDV-IU-clL" firstAttribute="leading" secondItem="mSY-Qa-YgC" secondAttribute="leadingMargin" constant="19" id="MTQ-e7-xuZ"/>
-                            <constraint firstItem="qbM-5u-CC8" firstAttribute="leading" secondItem="mSY-Qa-YgC" secondAttribute="leadingMargin" constant="19" id="VfR-CU-Ybw"/>
+                            <constraint firstAttribute="trailing" secondItem="d6r-5l-LZK" secondAttribute="trailing" constant="35" id="YTl-oU-6LP"/>
+                            <constraint firstItem="qbM-5u-CC8" firstAttribute="leading" secondItem="mSY-Qa-YgC" secondAttribute="leading" constant="35" id="dUY-KW-DvR"/>
                             <constraint firstItem="w9k-fh-25q" firstAttribute="top" secondItem="P1j-vN-3wS" secondAttribute="bottom" constant="20" id="fS6-B6-bBY"/>
-                            <constraint firstItem="P1j-vN-3wS" firstAttribute="top" secondItem="d6r-5l-LZK" secondAttribute="bottom" constant="65" id="kEu-yM-P4h"/>
                             <constraint firstAttribute="centerX" secondItem="P1j-vN-3wS" secondAttribute="centerX" id="kTY-uz-fdu"/>
-                            <constraint firstAttribute="centerX" secondItem="gIt-pP-Rcw" secondAttribute="centerX" id="kba-Rq-CpM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="d6r-5l-LZK" secondAttribute="trailing" constant="19" id="mMv-2m-sU0"/>
+                            <constraint firstAttribute="centerX" secondItem="gIt-pP-Rcw" secondAttribute="centerX" constant="7.5" id="kba-Rq-CpM"/>
                             <constraint firstAttribute="centerY" secondItem="gIt-pP-Rcw" secondAttribute="centerY" id="rsy-yX-dZF"/>
-                            <constraint firstItem="qbM-5u-CC8" firstAttribute="top" secondItem="PDV-IU-clL" secondAttribute="bottom" constant="132" id="uoD-9O-sHs"/>
                             <constraint firstItem="Hg7-vN-H6I" firstAttribute="top" secondItem="SyO-fn-z1x" secondAttribute="bottom" constant="37" id="yn8-hG-sZw"/>
                         </constraints>
                     </view>
@@ -175,7 +184,7 @@
             <objects>
                 <navigationController title="Record IT!" automaticallyAdjustsScrollViewInsets="NO" id="bMm-eK-Gp3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qot-6D-g5L">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qot-6D-g5L" customClass="MONavigation" customModule="PitchPerfect" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -201,4 +210,5 @@
         <image name="stop" width="50" height="50"/>
         <image name="stop-1" width="50" height="50"/>
     </resources>
+    <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
 </document>
